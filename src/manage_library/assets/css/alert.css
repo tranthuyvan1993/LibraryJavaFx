@@ -1,0 +1,44 @@
+.dialog {
+    -fx-background-color: white;
+}
+
+.dialog:header *.header-panel {
+    -fx-background-color: white;
+  -fx-alignment: CENTER;
+}
+
+.dialog > *.content.label {
+    -fx-font-size: 14px;
+  -fx-alignment: CENTER;
+}
+
+.dialog:header *.header-panel *.label {
+    -fx-font-size: 20px;
+  -fx-alignment: CENTER;
+}
+
+.dialog:header *.header-panel {
+  -fx-alignment: CENTER;
+}
+
+.dialog:header {
+  -fx-alignment: CENTER;
+}
+
+.dialog .button {
+  -fx-background-color: blue;
+  -fx-text-fill: white;
+}
+
+.dialog .button {
+  -fx-text-fill: white;
+}
+
+
+.dialog .btnCancel {
+  -fx-background-color: red;
+}
+
+.dialog .btnApply {
+  -fx-background-color: green;
+}

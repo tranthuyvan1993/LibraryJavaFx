@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage_library.controller.user_controller.ListUserController">
+    <children>
+<!--        <Pagination fx:id="pagination" layoutX="251.0" layoutY="147.0" prefHeight="550.0" prefWidth="800.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />-->
+        <TableView fx:id="adminTable" layoutX="10.0" layoutY="85.0" prefHeight="450.0" prefWidth="950.0">
+            <columns>
+                <TableColumn fx:id="indexCol" editable="false" maxWidth="72.66665649414062" prefWidth="45.0" text="STT" />
+                <TableColumn fx:id="usernameCol" maxWidth="279.3333740234375" prefWidth="137.33334350585938" text="Tài khoản" />
+                <TableColumn fx:id="fullnameCol" maxWidth="350.0" prefWidth="150.0" text="Họ Và Tên" />
+                <TableColumn fx:id="emailCol" editable="false" maxWidth="341.66668701171875" prefWidth="182.0" text="Email" />
+                <TableColumn fx:id="statusCol" maxWidth="307.6666564941406" prefWidth="100.33331298828125" text="Trạng thái" />
+                <TableColumn fx:id="phoneCol" maxWidth="367.66668701171875" prefWidth="120.0" text="Điện thoại" />
+                <TableColumn fx:id="roleCol" maxWidth="300.0" prefWidth="120.0" text="Chức năng" />
+            </columns>
+        </TableView>
+      <FontAwesomeIconView fx:id="btnAddUser" fill="#ffd20a" glyphName="USER_PLUS" layoutX="14.0" layoutY="53.0" size="35" />
+      <Label layoutX="81.0" layoutY="32.0" text="Tìm theo tài khoản/tên:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchUser" layoutX="286.0" layoutY="28.0" prefHeight="30.0" prefWidth="223.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+    </children>
+
+</AnchorPane>

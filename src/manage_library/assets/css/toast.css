@@ -1,0 +1,18 @@
+.snackbar .label {
+    -fx-text-fill: WHITE;
+}
+.jfx-snackbar {
+    -fx-font-size: 20;
+}
+
+.snackbar-warning .jfx-snackbar-content {
+    -fx-background-color: #ff9700;
+}
+
+.snackbar-error .jfx-snackbar-content {
+    -fx-background-color: #e51c24;
+}
+
+.snackbar-success .jfx-snackbar-content {
+    -fx-background-color: #4cb050;
+}

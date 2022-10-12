@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage_library.controller.user_controller.LoggedInController">
+   <children>
+      <AnchorPane prefHeight="350.0" prefWidth="190.0" style="-fx-background-color: #FED700;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/image/photo-library.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="201.0" text="Quản lý thư viện">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label layoutX="44.0" layoutY="249.0" text="Tel: 024-373-68688" />
+            <Label layoutX="27.0" layoutY="266.0" text="Address: Ha Noi, Viet Nam" />
+            <Label layoutX="13.0" layoutY="283.0" text="Email: libraryz1921@gmail.com" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="190.0" prefHeight="350.0" prefWidth="360.0">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="163.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/image/lock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="18.0" layoutY="123.0" text="Tài khoản:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="162.0" text="Mật khẩu:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfUsername" layoutX="123.0" layoutY="118.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="22.0" layoutY="307.0" text="Quên mật khẩu?" />
+            <Button fx:id="btnResetPassword" layoutX="116.0" layoutY="303.0" style="-fx-background-color: TRANSPARENT;" text="Gửi mật khẩu mới về mail" textFill="#2144e0" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnLogin" layoutX="122.0" layoutY="224.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="207.0" style="-fx-background-color: #02354e;" text="Đăng nhập" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Label fx:id="loginNotice" layoutX="122.0" layoutY="194.0" prefHeight="17.0" prefWidth="207.0" textFill="#db0f0f">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#f3c409" glyphName="USER" layoutX="315.0" layoutY="135.0" size="14" />
+            <TextField fx:id="tfPassword" layoutX="123.0" layoutY="160.0" prefHeight="25.0" prefWidth="207.0" />
+            <CheckBox fx:id="cbShowPass" layoutX="19.0" layoutY="186.0" mnemonicParsing="false" text="Hiện thị " />
+            <CheckBox fx:id="cbRememberLogin" layoutX="19.0" layoutY="280.0" mnemonicParsing="false" text="Ghi nhớ đăng nhập?" />
+            <PasswordField fx:id="hidenPass" layoutX="123.0" layoutY="160.0" prefHeight="25.0" prefWidth="207.0" />
+            <FontAwesomeIconView fill="#f3c409" glyphName="LOCK" layoutX="316.0" layoutY="180.0" size="14" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

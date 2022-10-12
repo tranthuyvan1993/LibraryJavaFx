@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="screenContainer" prefWidth="1200.0" stylesheets="@../assets/css/toast.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage_library.controller.LayoutController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="1200.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="avatarBtn" fitHeight="50.0" fitWidth="50.0" layoutX="1099.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@../assets/image/avatar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefWidth="300.0" style="-fx-background-color: #2362c8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="70.0" prefWidth="215.0" text="LIBRARY" textFill="#d3ce40">
+                     <font>
+                        <Font name="Harrington" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="64.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/library_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <VBox layoutY="100.0" prefHeight="500.0" prefWidth="300.0">
+               <children>
+                  <HBox fx:id="manageBookBtn" alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="300.0" spacing="10.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="70.0" prefWidth="250.0" text="Quản lý sách" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="24" text="" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="manageAdminBtn" alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="300.0" spacing="10.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="70.0" prefWidth="250.0" text="Quản lý Nhân viên" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ANDROID" size="24" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="manageReaderBtn" alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="300.0" spacing="10.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="70.0" prefWidth="250.0" text="Quản lý Người đọc" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" size="24" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="manageBorrowBtn" alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="300.0" spacing="10.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="70.0" prefWidth="250.0" text="Quản lý Mượn trả sách" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" size="24" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="reportBtn" alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="300.0" spacing="10.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="70.0" prefWidth="250.0" text="Báo cáo thống kê" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALCULATOR" size="24" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ScrollPane fx:id="rootScroll" layoutX="300.0" layoutY="70.0" prefHeight="411.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+      <AnchorPane fx:id="toggleActionUser" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white;" styleClass="shadow" stylesheets="@../assets/css/layout.css" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <VBox prefHeight="175.0" prefWidth="250.0">
+               <children>
+                  <HBox fx:id="userInfoBtn" alignment="CENTER" prefHeight="50.0" prefWidth="250.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label fx:id="showAdminInfo" prefHeight="50.0" prefWidth="228.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView fill="#0099ff" glyphName="INFORMATION" size="24" text="" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="changePasswordBtn" alignment="CENTER" prefHeight="50.0" prefWidth="250.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="228.0" text="Đổi mật khẩu">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView glyphName="PENCIL_LOCK" size="24" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="logoutBtn" alignment="CENTER" prefHeight="50.0" prefWidth="250.0" styleClass="navbarItem" stylesheets="@../assets/css/layout.css">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="228.0" text="Đăng xuất">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView fill="RED" glyphName="PENCIL_LOCK" size="24" text="" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane fx:id="snackbarAnchorPane" prefHeight="50.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="10.0" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1872.0" stylesheets="@../../assets/css/toast.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage_library.controller.borrow_controller.ListBorrowController">
+    <children>
+        <Label layoutX="25.0" layoutY="29.0" text="Danh sách mượn - trả sách" AnchorPane.leftAnchor="25.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textSearch" layoutX="25.0" layoutY="80.0" prefHeight="25.0" prefWidth="400.0" promptText="Nhập tìm kiếm..." />
+        <Pagination fx:id="pagination" layoutX="251.0" layoutY="147.0" prefHeight="538.0" prefWidth="1950.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+        <TableView fx:id="borrowTable" layoutX="26.0" layoutY="116.0" prefHeight="450.0" prefWidth="1950.0" stylesheets="@../../assets/css/table.css" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="116.0">
+            <columns>
+                <TableColumn fx:id="borrowDateCol" prefWidth="150.0" text="Ngày tạo" />
+                <TableColumn fx:id="readerCodeCol" prefWidth="125.0" text="Mã người đọc" />
+                <TableColumn fx:id="readerNameCol" prefWidth="150.0" text="Tên người đọc" />
+                <TableColumn fx:id="readerPhoneCol" prefWidth="125.0" text="Số điện thoại" />
+                <TableColumn fx:id="bookNameCol" minWidth="0.0" prefWidth="150.0" text="Tên sách" />
+                <TableColumn fx:id="bookCodeCol" minWidth="0.0" prefWidth="150.0" text="Mã sách" />
+                <TableColumn fx:id="authCol" minWidth="0.0" prefWidth="150.0" text="Tác giả" />
+                <TableColumn fx:id="priceCol" minWidth="0.0" prefWidth="150.0" text="Giá tiền" />
+                <TableColumn fx:id="depositCol" minWidth="0.0" prefWidth="150.0" text="Tiền cọc" />
+                <TableColumn fx:id="dueDateCol" minWidth="0.0" prefWidth="150.0" text="Ngày dự trả" />
+                <TableColumn fx:id="returnDateCol" minWidth="0.0" prefWidth="150.0" text="Ngày trả" />
+                <TableColumn fx:id="noteCol" minWidth="0.0" prefWidth="150.0" text="Ghi chú" />
+            </columns>
+        </TableView>
+        <JFXButton fx:id="addBorrowBtn" layoutX="775.0" layoutY="78.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: green;" text="Thêm mới" textFill="WHITE" AnchorPane.rightAnchor="25.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage_library.controller.reader_controller.CreateOrUpdateReaderController">
+   <children>
+      <Label fx:id="titleAction" layoutX="337.0" layoutY="14.0" text="Thêm mới Người đọc" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="76.0" layoutY="74.0" prefHeight="850.0" prefWidth="700.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="680.0">
+                     <children>
+                        <AnchorPane layoutX="238.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: blue;">
+                           <children>
+                              <ImageView fx:id="readerAvatar" fitHeight="200.0" fitWidth="200.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="labelClickNone" layoutX="54.0" layoutY="88.0" text="Chọn avatar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="readerAvatarError" alignment="CENTER" prefWidth="680.0" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="680.0">
+               <children>
+                  <MaterialDesignIconView glyphName="BARCODE_SCAN" size="24" wrappingWidth="35.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <VBox prefHeight="58.0" prefWidth="645.0">
+                     <children>
+                        <JFXTextField fx:id="readerCode" labelFloat="true" prefHeight="35.0" prefWidth="500.0" promptText="Mã người đọc">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <Label textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+               <children>
+                  <MaterialDesignIconView glyphName="ACCOUNT_OUTLINE" size="24" text="" wrappingWidth="35.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <VBox prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <JFXTextField fx:id="readerName" labelFloat="true" prefHeight="35.0" prefWidth="645.0" promptText="Tên người đọc">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <Label fx:id="readerNameError" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+               <children>
+                  <MaterialDesignIconView glyphName="CELLPHONE" size="24" text="" wrappingWidth="35.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <VBox prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <JFXTextField fx:id="readerPhone" labelFloat="true" prefHeight="35.0" prefWidth="645.0" promptText="Số điện thoại">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label fx:id="readerPhoneError" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+               <children>
+                  <MaterialDesignIconView glyphName="EMAIL_OUTLINE" size="24" wrappingWidth="35.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <VBox prefHeight="65.0" prefWidth="645.0">
+                     <children>
+                        <JFXTextField fx:id="readerEmail" labelFloat="true" prefHeight="35.0" prefWidth="500.0" promptText="Email">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label fx:id="readerEmailError" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+               <children>
+                  <MaterialDesignIconView glyphName="ACCOUNT_LOCATION" size="24" wrappingWidth="35.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <VBox prefHeight="65.0" prefWidth="645.0">
+                     <children>
+                        <JFXTextField fx:id="readerAddress" labelFloat="true" prefHeight="35.0" prefWidth="500.0" promptText="Địa chỉ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="700.0">
+               <children>
+                  <MaterialDesignIconView glyphName="GENDER_MALE_FEMALE" size="24" wrappingWidth="35.0" />
+                  <JFXRadioButton fx:id="readerMale" prefHeight="17.0" prefWidth="300.0" text="Nam" />
+                  <JFXRadioButton fx:id="readerFemale" text="Nữ" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="312.0" prefHeight="22.0" prefWidth="700.0">
+               <children>
+                  <JFXToggleButton fx:id="readerStatus" alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="339.0" text="Trạng thái">
+                     <HBox.margin>
+                        <Insets left="-3.0" />
+                     </HBox.margin>
+                  </JFXToggleButton>
+                  <JFXCheckBox fx:id="readerAcceptEmail" alignment="CENTER" contentDisplay="CENTER" text="Đăng ký nhận Email thông báo">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+               </children>
+            </HBox>
+            <JFXButton fx:id="addUserBtn" prefHeight="39.0" prefWidth="688.0" style="-fx-background-color: green;" text="Thêm mới" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <FontAwesomeIconView fx:id="backBtn" fill="RED" glyphName="LONG_ARROW_LEFT" layoutX="76.0" layoutY="54.0" size="48" />
+   </children>
+</AnchorPane>

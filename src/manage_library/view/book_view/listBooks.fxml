@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage_library.controller.book_controller.ListBooksController">
+    <children>
+        <Label layoutX="81.0" layoutY="32.0" text="Tìm theo tên sách/Mã">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="searchBook" layoutX="286.0" layoutY="28.0" prefHeight="30.0" prefWidth="223.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <FontAwesomeIconView fx:id="btnAddBook" fill="#ffd20a" glyphName="BOOK" layoutX="14.0" layoutY="53.0" size="35" />
+      <FontAwesomeIconView fill="#ffd20a" glyphName="PLUS" layoutX="46.0" layoutY="40.0" size="14" />
+        <TableView fx:id="bookTable" layoutX="13.0" layoutY="52.0" prefHeight="450.0" prefWidth="1074.0">
+            <columns>
+            <TableColumn fx:id="imageCol" maxWidth="150.0" text="Ảnh" />
+            <TableColumn fx:id="codeCol" maxWidth="108.00003051757812" prefWidth="108.00003051757812" text="Mã" />
+                <TableColumn fx:id="nameCol" maxWidth="250.0" prefWidth="100.0" text="Tên sách" />
+            <TableColumn fx:id="priceCol" maxWidth="120.0" prefWidth="95.0" text="Giá" />
+                <TableColumn fx:id="publisherCol" maxWidth="210.0" prefWidth="125.0" text="Nhà xuất bản" />
+                <TableColumn fx:id="authorCol" editable="false" maxWidth="210.0" prefWidth="120.0" text="Tác giả" />
+                <TableColumn fx:id="categoryCol" maxWidth="176.0" prefWidth="100.0" text="Thể loại" />
+                <TableColumn fx:id="indexCol" editable="false" maxWidth="180.0" minWidth="30.0" prefWidth="115.0" text="Trạng thái" />
+                <TableColumn fx:id="descriptionCol" maxWidth="250.0" prefWidth="115.0" text="Mô tả" />
+                <TableColumn fx:id="noteCol" maxWidth="250.0" prefWidth="120.0" text="Ghi chú" />
+            </columns>
+        </TableView>
+        <!--        <Pagination fx:id="pagination" layoutX="251.0" layoutY="147.0" prefHeight="550.0" prefWidth="800.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />-->
+        <Pagination fx:id="pagination" layoutX="251.0" layoutY="147.0" prefHeight="550.0" prefWidth="950.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+    </children>
+
+</AnchorPane>

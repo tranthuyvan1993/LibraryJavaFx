@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutY="-5.0" prefHeight="551.0" prefWidth="655.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="490.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="indexBook" alignment="CENTER" prefHeight="33.0" prefWidth="248.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="bookImage" fitHeight="325.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/image/bookImage/book_default.jpg" />
+                     </image></ImageView>
+                  <Label fx:id="deposit" alignment="CENTER" prefHeight="29.0" prefWidth="245.0" style="-fx-background-color: #ff5959;" text="0" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="QRCODE" size="24" wrappingWidth="35.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <VBox prefHeight="65.0" prefWidth="400.0">
+                           <children>
+                              <JFXTextField fx:id="bookCode" labelFloat="true" prefHeight="35.0" prefWidth="400.0" promptText="Mã sách">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label fx:id="bookCodeError" textFill="RED">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="BOOK_OPEN" size="24" wrappingWidth="35.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <VBox prefHeight="65.0" prefWidth="500.0">
+                           <children>
+                              <JFXTextField fx:id="bookName" labelFloat="true" prefHeight="35.0" prefWidth="400.0" promptText="Tên sách">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="ACCOUNT_KEY" size="24" wrappingWidth="35.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <VBox prefHeight="65.0" prefWidth="500.0">
+                           <children>
+                              <JFXTextField fx:id="auth" labelFloat="true" prefHeight="35.0" prefWidth="400.0" promptText="Tác giả">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="DIAMOND" size="24" wrappingWidth="35.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <VBox prefHeight="65.0" prefWidth="400.0">
+                           <children>
+                              <JFXTextField fx:id="price" labelFloat="true" prefHeight="35.0" prefWidth="400.0" promptText="Giá">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <VBox prefHeight="55.0" prefWidth="500.0">
+                           <children>
+                              <JFXDatePicker fx:id="borrowDate" nodeOrientation="RIGHT_TO_LEFT" prefWidth="400.0" promptText="Ngày mượn" />
+                              <Label textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="400.0">
+                     <children>
+                        <VBox prefHeight="55.0" prefWidth="500.0">
+                           <children>
+                              <JFXDatePicker fx:id="dueDate" nodeOrientation="RIGHT_TO_LEFT" prefWidth="400.0" promptText="Ngày dự trả" />
+                              <Label textFill="RED">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="700.0">
+                     <children>
+                        <VBox prefHeight="55.0" prefWidth="500.0">
+                           <children>
+                              <JFXDatePicker fx:id="returnDate" nodeOrientation="RIGHT_TO_LEFT" prefWidth="400.0" promptText="Ngày trả" />
+                              <Label textFill="RED">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="400.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="NOTE_PLUS_OUTLINE" size="24" wrappingWidth="35.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <VBox prefHeight="65.0" prefWidth="400.0">
+                           <children>
+                              <JFXTextField fx:id="noteBookDetail" labelFloat="true" prefHeight="35.0" prefWidth="400.0" promptText="Tình trạng sách">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="400.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="NOTE" size="24" wrappingWidth="35.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <VBox prefHeight="65.0" prefWidth="400.0">
+                           <children>
+                              <JFXTextField fx:id="borrowNote" labelFloat="true" prefHeight="35.0" prefWidth="400.0" promptText="Tình trạng trước, sau khi mượn sách">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="700.0">
+                     <children>
+                        <JFXRadioButton fx:id="yetReturnBtn" prefHeight="17.0" prefWidth="106.0" styleClass="text-radio" stylesheets="@../../assets/css/style.css" text="Chưa trả" />
+                        <JFXRadioButton fx:id="lateReturnBtn" prefHeight="17.0" prefWidth="106.0" styleClass="text-radio" stylesheets="@../../assets/css/style.css" text="Trả muộn" />
+                        <JFXRadioButton fx:id="hasReturnBtn" prefHeight="17.0" prefWidth="106.0" styleClass="text-radio" stylesheets="@../../assets/css/style.css" text="Đã trả" />
+                        <JFXRadioButton fx:id="notReturnBtn" prefHeight="17.0" prefWidth="106.0" styleClass="text-radio" stylesheets="@../../assets/css/style.css" text="Không trả" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <AnchorPane prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MaterialDesignIconView fx:id="removeBookBtn" glyphName="CLOSE" layoutX="-1.0" layoutY="26.0" size="30" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="8.0" prefWidth="655.0" style="-fx-background-color: #ff5959;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

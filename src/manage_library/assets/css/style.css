@@ -1,0 +1,10 @@
+.text-field:disabled, .text-radio:disabled {
+   -fx-opacity: 0.7;
+}
+.text-radio {
+    -fx-text-fill: black;
+}
+
+.text-radio:disabled {
+    -fx-text-fill: gray;
+}

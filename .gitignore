@@ -1,0 +1,13 @@
+.idea
+/out/
+*.class
+*.iml
+.vscode/
+*.ipr
+*.iws
+*.war
+*.ear
+backup_db/
+/src/manage_library/assets/data/info.dat
+
+src/manage_library/assets/image/bookImage/1662443689421_0965734293.jpg
